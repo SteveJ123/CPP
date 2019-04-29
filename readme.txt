@@ -1,11 +1,16 @@
-inline function
+
+g++ -g first.cpp -o first
+first.exe
+
+inline function  - when function is called compiler control is transfered to function definition
+when inline function is used function definition will be copy pasted wherever function call is made.
+It saves compiler time.  Otherwise it same as normal function.
 // int a =5;
 // int b=5;
 // inline int add(){
 
 //     return (a + b);
 // }
-
 
 
 
