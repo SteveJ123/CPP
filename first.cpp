@@ -11,6 +11,8 @@ char &replacechar(int i);
 int funover(int x);
 int funover(int x, int y);
 
+int pointfun(int *x, int *y);
+
 // class List {
 //     int next;
 //    List() : next(10) {}
@@ -112,8 +114,8 @@ int main(){
 
 //function overload
 
-// int x=10;
-// int y =10;
+// int x = 10;
+// int y = 20;
 
 // int fun1 = funover(x);
 // cout<<fun1<<endl;
@@ -128,6 +130,12 @@ int main(){
 // List l1;
 // l1.display();
 
+//pointer to function
+
+// pointfun(&x, &y);
+// cout<<"value of x: "<<x<<endl;
+// cout<<"value of y: "<<y<<endl;
+
     return 0;    
 }
 
@@ -141,13 +149,22 @@ int main(){
 
 //function overload
 
-int funover(int x){
+// int funover(int x){
 
-    return x;
-}
+//     return x;
+// }
 
 
-int funover(int x, int y){
+// int funover(int x, int y){
 
-    return x+y;
+//     return x+y;
+// }
+
+//pointer to function
+
+int pointfun(int *x, int *y){
+
+    int t = *x;
+    *x = *y;
+    *y = t;
 }
