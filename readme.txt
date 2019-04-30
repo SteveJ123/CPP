@@ -80,9 +80,25 @@ cout<<"next value is: "<<l.getnext();
 
 //iterating array elements
 
+size of array size_t testing = sizeof(texts)/sizeof(texts[0]);
+
+
+string texts[] = {"Apple", "Banana", "Orange"};
+size_t testing = sizeof(texts)/sizeof(texts[0]);
+cout<<testing<<endl;
+
+
 
 string texts[] = {"Apple", "Banana", "Orange"};
 for( unsigned int a = 0; a < sizeof(texts); a = a + 1 )
 {
     cout << "value of a: " << texts[a] << endl;
 }
+
+
+
+string texts[] = {"Apple", "Banana", "Orange", ""};
+   for( unsigned int a = 0; texts[a].length(); a = a + 1 )
+   {
+       cout << "value of a: " << texts[a] << endl;
+   }

@@ -1,4 +1,7 @@
 #include<iostream>
+#include <cstddef>
+#include <iterator>
+
 using namespace std;
 
 
@@ -48,10 +51,16 @@ int main(){
 // l2.display();
 
 
-    string s="some string";
-    auto begintest=s.begin();
-    cout<<&begintest<<endl;
+    // string s="some string";
+    // auto begintest=s.begin();
+    // cout<<&begintest<<endl;
 
+
+
+
+string texts[] = {"Apple", "Banana", "Orange"};
+size_t testing = sizeof(texts)/sizeof(texts[0]);
+cout<<testing<<endl;
     // string &t = s;
     // t[0]= "S";
 
