@@ -136,6 +136,21 @@ int main(){
 // cout<<"value of x: "<<x<<endl;
 // cout<<"value of y: "<<y<<endl;
 
+//array
+
+int arr[]={10, 20, 30, 40};
+
+// for(int i=0; i<4; i++){
+// cout<<"arr value: "<<arr[i]<<endl;    
+// }
+
+int *p;
+p=arr;  //points to first element of arr - address
+
+for(int i=0; i<4; i++){
+cout<<"arr value: "<<*(p+i)<<endl;    
+}
+
     return 0;    
 }
 
