@@ -75,3 +75,14 @@ l.setnext(10);
 cout<<"next value is: "<<l.getnext();
     return 0;    
 }
+
+
+
+//iterating array elements
+
+
+string texts[] = {"Apple", "Banana", "Orange"};
+for( unsigned int a = 0; a < sizeof(texts); a = a + 1 )
+{
+    cout << "value of a: " << texts[a] << endl;
+}

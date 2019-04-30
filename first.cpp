@@ -48,7 +48,10 @@ int main(){
 // l2.display();
 
 
-    // string s="some string";
+    string s="some string";
+    auto begintest=s.begin();
+    cout<<&begintest<<endl;
+
     // string &t = s;
     // t[0]= "S";
 
@@ -72,14 +75,26 @@ int main(){
 //     std::cout << *it;
 //   std::cout << '\n';
 // replacechar(4);
-replacechar(0)='H';
-cout<<str<<endl;
+// replacechar(0)='H';
+// cout<<str<<endl;
+
+
+// int arr[]={1, 2, 3, 4, 5, 6};
+// auto begintest = begin(arr);
+// cout<<begintest<<endl;
+
+
+// int sum = 0, value = 0;
+//  // read until end-of-file, calculating a running total of all values read
+//  while (std::cin >> value)
+//  sum += value; // equivalent to sum = sum + value
+//  std::cout << "Sum is: " << sum << std::endl;
     return 0;    
 }
 
 
-char &replacechar(int i){
+// char &replacechar(int i){
 // str[i] = "X";
 // cout<<str[i]<<endl;
-    return str[i];
-}
+//     return str[i];
+// }
