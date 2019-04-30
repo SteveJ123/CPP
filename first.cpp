@@ -7,6 +7,10 @@ using namespace std;
 
 
 char &replacechar(int i);
+
+int funover(int x);
+int funover(int x, int y);
+
 // class List {
 //     int next;
 //    List() : next(10) {}
@@ -24,8 +28,13 @@ class List {
     int id;
     string name;
 
-
+//constructor overload
 public:
+List(){
+    id=0;
+    name="empty";
+}
+
 List(int d, string n){
     id = d;
     name = n;
@@ -58,9 +67,11 @@ int main(){
 
 
 
-string texts[] = {"Apple", "Banana", "Orange"};
-size_t testing = sizeof(texts)/sizeof(texts[0]);
-cout<<testing<<endl;
+// string texts[] = {"Apple", "Banana", "Orange"};
+// size_t testing = sizeof(texts)/sizeof(texts[0]);
+// cout<<testing<<endl;
+
+
     // string &t = s;
     // t[0]= "S";
 
@@ -98,6 +109,25 @@ cout<<testing<<endl;
 //  while (std::cin >> value)
 //  sum += value; // equivalent to sum = sum + value
 //  std::cout << "Sum is: " << sum << std::endl;
+
+//function overload
+
+// int x=10;
+// int y =10;
+
+// int fun1 = funover(x);
+// cout<<fun1<<endl;
+// int fun2 = funover(x, y);
+// cout<<fun2<<endl;
+
+//constructor overload
+
+// List l(1, "David");
+// l.display();
+
+// List l1;
+// l1.display();
+
     return 0;    
 }
 
@@ -107,3 +137,17 @@ cout<<testing<<endl;
 // cout<<str[i]<<endl;
 //     return str[i];
 // }
+
+
+//function overload
+
+int funover(int x){
+
+    return x;
+}
+
+
+int funover(int x, int y){
+
+    return x+y;
+}
