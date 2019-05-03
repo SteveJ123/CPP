@@ -115,3 +115,4 @@ string texts[] = {"Apple", "Banana", "Orange", ""};
    virtual function
    inheritence
    polymorphism
+   ambiguity
