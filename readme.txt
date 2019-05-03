@@ -116,3 +116,16 @@ string texts[] = {"Apple", "Banana", "Orange", ""};
    inheritence
    polymorphism
    ambiguity
+
+
+
+  abc *ob;
+(*ob).getdata();
+ob->display();
+
+
+Simple. *ob returns the object that is pointed to. The object at the value (an address) of ob.
+So since *ob is the object at the address, (*ob).getdata() is calling .getdata() on the object that was returned.
+*expr is called a dereference expression, btw. You dereference the pointer to obtain the object that is pointed to.
+a->b is just a convenient syntax for accessing members of a pointed-to object.
+It's actually defined to be equivalent to (*a).b. Roughly. There's some additional parens here and there in the actual definition.
