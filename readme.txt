@@ -102,3 +102,16 @@ string texts[] = {"Apple", "Banana", "Orange", ""};
    {
        cout << "value of a: " << texts[a] << endl;
    }
+
+
+
+
+   pointer
+   array
+   inline function
+   constructor
+   constructor overload
+   copy constructor
+   virtual function
+   inheritence
+   polymorphism
