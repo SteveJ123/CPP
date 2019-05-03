@@ -13,6 +13,49 @@ int funover(int x, int y);
 
 int pointfun(int *x, int *y);
 
+
+
+class Add1{
+    int value1;
+    int value2;
+
+    public:
+    Add1(){
+
+    }
+
+    Add1(int a, int b){
+        value1=a;
+        value2=b;
+    }
+
+    void display(){
+        cout<<value1<<" "<<value2<<endl;
+    }
+
+
+    // Add1 operator+(const Add1 &ob){
+    //     Add1 temp;
+    //     temp.value1 = this->value1+ob.value1;
+    //     temp.value2 = this->value2+ob.value2;
+    //     return temp;
+    // }
+
+//no function name - return type
+friend Add1 operator+(Add1 l1, Add1 l2);
+
+ Add1 operator++(int){
+    this->value1++;
+    this->value2++;
+    return *this;
+}
+
+Add1 operator++(){
+    ++(this->value1);
+    ++(this->value2);
+    // return *this;
+}
+};
 // class List {
 //     int next;
 //    List() : next(10) {}
@@ -47,6 +90,17 @@ void display(){
     cout<<"name:  "<<name<<endl;
 }
 };
+
+
+//friend function operator overloading
+//no function name - return type
+Add1 operator+(Add1 l1, Add1 l2){
+    Add1 temp;
+    temp.value1 = l1.value1 + l2.value1;
+    temp.value2 = l1.value2 + l2.value2;
+    return temp;
+}
+
 
 
 // char str[20]="hello World";
@@ -138,18 +192,36 @@ int main(){
 
 //array
 
-int arr[]={10, 20, 30, 40};
+// string arr[]={"test", "test", "test", "test"};
 
 // for(int i=0; i<4; i++){
 // cout<<"arr value: "<<arr[i]<<endl;    
 // }
 
-int *p;
-p=arr;  //points to first element of arr - address
+// string *p;
+// p=arr;  //points to first element of arr - address
 
-for(int i=0; i<4; i++){
-cout<<"arr value: "<<*(p+i)<<endl;    
-}
+// for(int i=0; i<4; i++){
+// cout<<"arr value: "<<*(p+i)<<endl;    
+// }
+
+
+
+
+//constructor overload
+
+Add1 ad1(20,20);
+Add1 ad2(20,10);
+ad1.display();
+ad2.display();
+Add1 ad3 = ad1+ad2;
+ad3.display();
+
+// ++ad1;
+// ad1.display();
+
+(ad1++).display();
+ad1.display();
 
     return 0;    
 }
