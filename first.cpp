@@ -34,27 +34,27 @@ class Add1{
     }
 
 
-    // Add1 operator+(const Add1 &ob){
-    //     Add1 temp;
-    //     temp.value1 = this->value1+ob.value1;
-    //     temp.value2 = this->value2+ob.value2;
-    //     return temp;
-    // }
+    Add1 operator+(const Add1 &ob){
+        Add1 temp;
+        temp.value1 = this->value1+ob.value1;
+        temp.value2 = this->value2+ob.value2;
+        return temp;
+    }
 
 //no function name - return type
-friend Add1 operator+(Add1 l1, Add1 l2);
+// friend Add1 operator+(Add1 l1, Add1 l2);
 
- Add1 operator++(int){
-    this->value1++;
-    this->value2++;
-    return *this;
-}
+//  Add1 operator++(int){
+//     this->value1++;
+//     this->value2++;
+//     return *this;
+// }
 
-Add1 operator++(){
-    ++(this->value1);
-    ++(this->value2);
-    // return *this;
-}
+// Add1 operator++(){
+//     ++(this->value1);
+//     ++(this->value2);
+//     // return *this;
+// }
 };
 // class List {
 //     int next;
@@ -94,12 +94,12 @@ void display(){
 
 //friend function operator overloading
 //no function name - return type
-Add1 operator+(Add1 l1, Add1 l2){
-    Add1 temp;
-    temp.value1 = l1.value1 + l2.value1;
-    temp.value2 = l1.value2 + l2.value2;
-    return temp;
-}
+// Add1 operator+(Add1 l1, Add1 l2){
+//     Add1 temp;
+//     temp.value1 = l1.value1 + l2.value1;
+//     temp.value2 = l1.value2 + l2.value2;
+//     return temp;
+// }
 
 
 
@@ -209,19 +209,24 @@ int main(){
 
 
 //constructor overload
-
+Add1 *p1;
+Add1 *p2;
 Add1 ad1(20,20);
 Add1 ad2(20,10);
-ad1.display();
-ad2.display();
-Add1 ad3 = ad1+ad2;
+
+p1= &ad1;
+p2=&ad2;
+// ad1.display();
+// ad2.display();
+// Add1 ad3 = ad1+ad2;
+Add1 ad3 = (*p1)+(*p2);
 ad3.display();
 
 // ++ad1;
 // ad1.display();
 
-(ad1++).display();
-ad1.display();
+// (ad1++).display();
+// ad1.display();
 
     return 0;    
 }
