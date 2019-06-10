@@ -4,42 +4,95 @@
 
 using namespace std;
 
+int x = 40;
+/*polymorphism*/
+
+// class Enemy{
+
+//     protected:
+//     int attackpower;
+
+//     public:
+//     void setattackpower(int a){
+//         attackpower = a;
+//     }
+// };
+
+// class Ninja: public Enemy{
+//     public:
+//     void attack(){
+//         cout<<"I am ninja - " <<attackpower<<endl;
+//     }
+// };
 
 
-char &replacechar(int i);
+// class Monster: public Enemy{
 
-int funover(int x);
-int funover(int x, int y);
+//     public:
+//     void attack(){
+//         cout<<"I am monster - "<<attackpower<<endl;
+//     }
+// };
 
-int pointfun(int *x, int *y);
 
 
-
-class Add1{
-    int value1;
-    int value2;
+class Enemy{
+    
+    int attackpower = 10;
 
     public:
-    Add1(){
-
-    }
-
-    Add1(int a, int b){
-        value1=a;
-        value2=b;
-    }
-
-    void display(){
-        cout<<value1<<" "<<value2<<endl;
+    void setattackpower(int a){
+        attackpower = a;
     }
 
 
-    Add1 operator+(const Add1 &ob){
-        Add1 temp;
-        temp.value1 = this->value1+ob.value1;
-        temp.value2 = this->value2+ob.value2;
-        return temp;
+    friend class Ninja;
+};
+
+class Ninja{
+    public:
+    void attack(Enemy e){
+        cout<<"I am ninja - " <<e.attackpower<<endl;
     }
+};
+
+
+
+
+// char &replacechar(int i);
+
+// int funover(int x);
+// int funover(int x, int y);
+
+// int pointfun(int *x, int *y);
+
+
+
+// class Add1{
+//     int value1;
+//     int value2;
+
+//     public:
+//     Add1(){
+
+//     }
+
+//     Add1(int a, int b){
+//         value1=a;
+//         value2=b;
+//     }
+
+//     void display(){
+//         cout<<value1<<" "<<value2<<endl;
+//     }
+
+
+//     Add1 operator+(const Add1 &ob){
+//         Add1 temp;
+//         temp.value1 = this->value1+ob.value1;
+//         temp.value2 = this->value2+ob.value2;
+//         return temp;
+//     }
 
 //no function name - return type
 // friend Add1 operator+(Add1 l1, Add1 l2);
@@ -55,7 +108,7 @@ class Add1{
 //     ++(this->value2);
 //     // return *this;
 // }
-};
+// };
 // class List {
 //     int next;
 //    List() : next(10) {}
@@ -68,28 +121,28 @@ class Add1{
 // }
 
 
-class List {
+// class List {
     
-    int id;
-    string name;
+//     int id;
+//     string name;
 
-//constructor overload
-public:
-List(){
-    id=0;
-    name="empty";
-}
+// //constructor overload
+// public:
+// List(){
+//     id=0;
+//     name="empty";
+// }
 
-List(int d, string n){
-    id = d;
-    name = n;
-}
+// List(int d, string n){
+//     id = d;
+//     name = n;
+// }
 
-void display(){
-    cout<<"id:  "<<id<<endl;
-    cout<<"name:  "<<name<<endl;
-}
-};
+// void display(){
+//     cout<<"id:  "<<id<<endl;
+//     cout<<"name:  "<<name<<endl;
+// }
+// };
 
 
 //friend function operator overloading
@@ -104,7 +157,7 @@ void display(){
 
 
 // char str[20]="hello World";
-string str ="hello World";
+// string str ="hello World";
 
 int main(){
 
@@ -209,24 +262,40 @@ int main(){
 
 
 //constructor overload
-Add1 *p1;
-Add1 *p2;
-Add1 ad1(20,20);
-Add1 ad2(20,10);
+// Add1 *p1;
+// Add1 *p2;
+// Add1 ad1(20,20);
+// Add1 ad2(20,10);
 
-p1= &ad1;
-p2=&ad2;
+// p1= &ad1;
+// p2=&ad2;
 // ad1.display();
 // ad2.display();
 // Add1 ad3 = ad1+ad2;
-Add1 ad3 = (*p1)+(*p2);
-ad3.display();
+// Add1 ad3 = (*p1)+(*p2);
+// ad3.display();
 
 // ++ad1;
 // ad1.display();
 
 // (ad1++).display();
 // ad1.display();
+
+// Ninja n;
+// Monster m;
+// n.setattackpower(20);
+// m.setattackpower(10);
+// n.attack();
+// m.attack();
+
+
+// Ninja n;
+// Enemy m;
+// n.attack(m);
+int x =20;
+cout<<::x<<endl;
+
+
 
     return 0;    
 }
