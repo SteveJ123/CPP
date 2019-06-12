@@ -96,6 +96,9 @@ Dv d;
 test=&d;
 test->set(10, 10);
 test->display();
+
+// d.set(10, 10);
+// d.display();
 cout<<"testing"<<endl;
     return 0;
 }
